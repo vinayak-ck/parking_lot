@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Parking Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🚗 Parking Management System</h1>
+      <p class="sub">Smooth, simple & beautiful controls</p>
+    </header>
+
+    <main>
+      <section class="card control-card">
+        <div class="row">
+          <label class="field">
+            <span>Vehicle Type</span>
+            <select id="vehicleType">
+              <option value="car">Car</option>
+              <option value="bike">Bike</option>
+              <option value="rickshaw">Auto Rickshaw</option>
+              <option value="bus">Bus</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Vehicle Number</span>
+            <input id="vehicleNumber" type="number" placeholder="e.g. 101" />
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button data-action="enter" class="primary">Enter Vehicle</button>
+          <button data-action="exit" class="danger">Exit Vehicle</button>
+          <button data-action="cost" class="accent">Show Cost</button>
+          <button data-action="total">Total Collection</button>
+          <button data-action="space">Vehicles in Parking</button>
+        </div>
+      </section>
+
+      <section class="card output-card">
+        <div id="output" class="output">All results appear here 👇</div>
+      </section>
+
+      <section class="card dashboard-card">
+        <h2>📊 Live Dashboard</h2>
+        <div class="grid">
+          <div class="stat">
+            <div class="stat-head">
+              <span>Cars</span><span id="carsCount">0/0</span>
+            </div>
+            <div class="bar"><div id="carsBar" class="fill"></div></div>
+            <div class="list" id="carsList"></div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-head">
+              <span>Bikes</span><span id="bikesCount">0/0</span>
+            </div>
+            <div class="bar"><div id="bikesBar" class="fill"></div></div>
+            <div class="list" id="bikesList"></div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-head">
+              <span>Rickshaws</span><span id="rickCount">0/0</span>
+            </div>
+            <div class="bar"><div id="rickBar" class="fill"></div></div>
+            <div class="list" id="rickList"></div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-head">
+              <span>Buses</span><span id="busCount">0/0</span>
+            </div>
+            <div class="bar"><div id="busBar" class="fill"></div></div>
+            <div class="list" id="busList"></div>
+          </div>
+        </div>
+
+        <div class="earnings">
+          <div>Car ₹ <span id="earnCar">0</span></div>
+          <div>Bike ₹ <span id="earnBike">0</span></div>
+          <div>Rickshaw ₹ <span id="earnRick">0</span></div>
+          <div>Bus ₹ <span id="earnBus">0</span></div>
+          <div class="total">Total ₹ <span id="earnTotal">0</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Made with ❤️ for simplicity</span>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
